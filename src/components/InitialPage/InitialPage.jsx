@@ -52,12 +52,17 @@ export default function InitialPage() {
     await _sleep(1000);
     alert(JSON.stringify(values, null, 2));
     actions.setSubmitting(false);
+    for (var key in values) {
+      localStorage.setItem(key, values[key]);
+      console.log(key);
+      console.log(values[key]);
+  }
+
 
     setActiveStep(activeStep + 1);
   }
 
   function _handleSubmit(values, actions) {
-    debugger;
     if (isLastStep) {
       _submitForm(values, actions);
     } else {
