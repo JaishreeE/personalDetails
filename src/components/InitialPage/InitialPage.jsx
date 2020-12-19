@@ -54,8 +54,6 @@ export default function InitialPage() {
     actions.setSubmitting(false);
     for (var key in values) {
       localStorage.setItem(key, values[key]);
-      console.log(key);
-      console.log(values[key]);
   }
 
 
