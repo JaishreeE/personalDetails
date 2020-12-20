@@ -12,7 +12,7 @@ export default function MaterialLayout(props) {
 
   return (
     <div className="mx-auto container flex items-center bg-gray-200">
-      <div className="w-full pt-2 p-4">
+      <div>
         <div>{children}</div>
         <Footer />
       </div>

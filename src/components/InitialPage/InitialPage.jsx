@@ -127,7 +127,7 @@ export default function InitialPage() {
         {activeStep === steps.length ? (
           <PersonalDetailsSuccess />
         ) : (
-          <Formik class="w-full pt-2 p-4"
+          <Formik 
             initialValues={formInitialValues}
             validationSchema={currentValidationSchema}
             onSubmit={_handleSubmit}
