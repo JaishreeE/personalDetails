@@ -16,7 +16,7 @@ export default function InputField(props) {
 
   return (
   <div class="ml-2">
-    <TextField color="secondary"
+    <TextField 
       label="Outlined" 
       variant="outlined"
       type="text"
