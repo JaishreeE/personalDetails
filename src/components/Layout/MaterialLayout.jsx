@@ -11,8 +11,8 @@ export default function MaterialLayout(props) {
   const { children } = props;
 
   return (
-    <div className="mx-auto container flex items-center bg-gray-200">
-      <div>
+    <div className="min-h-screen flex flex-col bg-gray-200">
+      <div >
         <div>{children}</div>
         <Footer />
       </div>
