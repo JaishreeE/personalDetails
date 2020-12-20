@@ -86,15 +86,15 @@ export default function PersonalDetails(props) {
     }
   } = props;
   return (
-    <React.Fragment class="mx-auto container flex items-center">
+    <React.Fragment>
       <div class="w-full pt-2 p-4">
         <div class="mx-auto md:p-6 md:w-1/2">
           <div class="flex items-center justify-center" >
             <div class="mx-2 text-center">
-              <Typography className="flex flex-wrap justify-between" variant="h6" gutterBottom>
-                Add your Personal Details</Typography>
+              <Typography variant="h6" gutterBottom>
+                <p className="font-sans text-blue-900 flex flex-wrap justify-center font-extrabold">Add your Personal Details </p></Typography>
               <Typography variant="subtitle1">
-                Please enter the fields</Typography>
+                <p className="font-sans text-blue-900 flex flex-wrap justify-center ">Please enter the fields</p></Typography>
             </div>
           </div>
 

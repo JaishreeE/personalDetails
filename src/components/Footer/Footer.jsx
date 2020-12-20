@@ -6,7 +6,7 @@ export default function Footer() {
     <Typography variant="body2" color="textSecondary" align="center">
       <div class="mt-8">
         <p class="text-sm">Already have an account
-            <a class="font-bold text-sm text-orange-500 hover:text-orange-800" href="#"> Login</a>
+            <a class="font-bold text-sm text-yellow-500 hover:text-yellow-600" href="#"> Login</a>
         </p>
       </div>
     </Typography>

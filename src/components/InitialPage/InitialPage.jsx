@@ -136,7 +136,7 @@ export default function InitialPage() {
               <Form id={formId} >
                 {_renderStepContent(activeStep)}
 
-                <div className={classes.buttons}>
+                <div class="flex items-left justify-center ml-96 -mt-10" className={classes.buttons}>
                   {activeStep !== 0 && ( <div  className={classes.wrapper}>
                     <Button onClick={_handleBack}
                       className={classes.margin}>
