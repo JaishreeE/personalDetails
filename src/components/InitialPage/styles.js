@@ -19,5 +19,11 @@ export default makeStyles(theme => ({
     position: 'absolute',
     top: '50%',
     left: '50%'
-  }
+  },
+  stepIcon: {
+    color: "#ED5901"
+  },
+  connectorLine: {
+    borderColor: 'transparent',
+  },
 }));

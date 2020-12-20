@@ -3,13 +3,14 @@ import {
   Stepper,
   Step,
   StepLabel,
+  StepConnector,
   Button,
   CircularProgress,
   withStyles
 } from '@material-ui/core';
 import { orange, grey } from '@material-ui/core/colors';
 import { Formik, Form } from 'formik';
-
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 import PersonalDetails from './Forms/PersonalDetails';
 import CompanyDetails from './Forms/CompanyDetails';
@@ -21,6 +22,28 @@ import checkoutFormModel from './FormModel/checkoutFormModel';
 import formInitialValues from './FormModel/formInitialValues';
 
 import useStyles from './styles';
+
+import { styled, makeStyles } from "@material-ui/styles";
+
+const StyledStepLabel = styled(StepLabel)({
+  
+  "& .MuiStepLabel-label": {
+    color: "#ffffff"
+  },
+  "& .MuiStepIcon-active": {
+    color: "#ED5901"
+  },
+  "& .MuiStepIcon-completed":{
+    color: "#ED5901",
+  }
+});
+
+const StyledStepper = styled(Stepper)({
+  "& ..MuiStepConnector-line": {
+    borderColor: "#ED5901"
+  },
+  backgroundColor: "#29435A"
+});
 
 const steps = ['Personal Details', 'Company details', 'OTP validation'];
 const { formId, formField } = checkoutFormModel;
@@ -84,18 +107,21 @@ export default function InitialPage() {
 
   }))(Button);
 
+
   return (
     <React.Fragment>
-      <div className="text-gray-100 bg-gray-900 body-font shadow w-full">
-      <Stepper className="text-gray-100 bg-gray-900 body-font shadow w-full" activeStep={activeStep}>
+      <StyledStepper connector={
+            <StepConnector
+              classes={{
+                line: classes.connectorLine
+              }}
+            />} activeStep={activeStep}>
         {steps.map(label => (
           <Step key={label}>
-            <StepLabel >{label}</StepLabel>
+            <StyledStepLabel >{label}</StyledStepLabel>
           </Step>
         ))}
-      </Stepper>
-      </div>
-
+      </StyledStepper>
 
       <React.Fragment>
         {activeStep === steps.length ? (
