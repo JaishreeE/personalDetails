@@ -9,7 +9,7 @@ function PersonalDetailsSuccess() {
               <Typography variant="h6" gutterBottom>
                 <p className="font-sans text-blue-900 flex flex-wrap justify-center font-extrabold">Welcome</p></Typography>
               <Typography variant="subtitle1">
-                <p className="font-sans text-blue-900 flex flex-wrap justify-center ">Thank you details...</p></Typography>
+                <p className="font-sans text-blue-900 flex flex-wrap justify-center ">Thank you...</p></Typography>
             </div>
           </div>
 
