@@ -54,9 +54,7 @@ export default function InitialPage() {
     actions.setSubmitting(false);
     for (var key in values) {
       localStorage.setItem(key, values[key]);
-  }
-
-
+    }
     setActiveStep(activeStep + 1);
   }
 
@@ -89,7 +87,7 @@ export default function InitialPage() {
   return (
     <React.Fragment>
       <div className="text-gray-100 bg-gray-900 body-font shadow w-full">
-      <Stepper activeStep={activeStep}>
+      <Stepper className="text-gray-100 bg-gray-900 body-font shadow w-full" activeStep={activeStep}>
         {steps.map(label => (
           <Step key={label}>
             <StepLabel >{label}</StepLabel>

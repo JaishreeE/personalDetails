@@ -15,12 +15,16 @@ export default function InputField(props) {
   }
 
   return (
-    <TextField
+  <div class="ml-2">
+    <TextField color="secondary"
+      label="Outlined" 
+      variant="outlined"
       type="text"
       error={meta.touched && meta.error && true}
       helperText={_renderHelperText()}
       {...field}
       {...rest}
     />
+    </div>
   );
 }
